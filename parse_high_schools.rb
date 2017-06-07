@@ -39,7 +39,7 @@ def write_to_csv(highschools, headers)
   CSV.open("hochschulen.csv", "wb", col_sep: ";") do |csv|
     csv << ["URL"] + headers
     highschools.each do |highschool|
-      csv << [highschool["Name"], highschool["Land"], highschool["Träger"], highschool["Promotionsrecht"], highschool["Gründung"], highschool["Studierende"], highschool["Stand"]]
+      csv << [highschool["URL"], highschool["Name"], highschool["Land"], highschool["Träger"], highschool["Promotionsrecht"], highschool["Gründung"], highschool["Studierende"], highschool["Stand"]]
     end
   end
 end
